@@ -7,7 +7,7 @@ use App\Models\User;
 use Illuminate\Database\Seeder;
 
 use Illuminate\Support\Facades\Hash;
-use App\Model\Category;
+use App\Models\Category;
 
 class DatabaseSeeder extends Seeder
 {
@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('admin')
         ]);
         
-        $category = [
+        $categories = [
             ['name' => 'fruit'],
             ['name' => 'vegetables']
         ];
