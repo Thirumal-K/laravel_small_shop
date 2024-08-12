@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Database\Seeder;
 
 use Illuminate\Support\Facades\Hash;
+use App\Model\Category;
 
 class DatabaseSeeder extends Seeder
 {
@@ -22,5 +23,15 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@gmail.com',
             'password' => Hash::make('admin')
         ]);
+        
+        $category = [
+            ['name' => 'fruit'],
+            ['name' => 'vegetables']
+        ];
+
+        foreach($categories as $row)
+        {
+            Category::create($row);
+        }
     }
 }
